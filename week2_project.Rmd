@@ -1,0 +1,23 @@
+---
+title: "Developing Data Product - Week 2"
+author: "Ale Goity"
+date: "30/6/2021"
+output: html_document
+---
+# Instructions
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+# Creating a map
+
+I create a map that shows the city where I live, Santiago de Chile.
+```{r}
+library(leaflet)
+my_map <- leaflet() %>%
+    addTiles() %>%
+    addMarkers(lat=-33.4513, lng=-70.6653, popup = "Santiago, Chile")
+
+my_map
+```
+
